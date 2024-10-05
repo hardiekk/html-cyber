@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+.navlist{
+
+    display: flex;
+}
+.navlist a{
+   color: white;
+   font-size: 15px;
+   margin-left: 60px;
+   font-weight: 600;
+   border-bottom: 2px solid transparent;
+   transition:all .55s ease;
+}
+.navlist a:hover{
+    color: #4d9559;
+    border-bottom: 2px solid whitesmoke;
+}
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+
+}
+.dd{
+    position: relative;
+    margin-top: 100px;
+    margin-left: 70px;
+    height: 380px;
+    width: 400px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+section{
+    padding: 0 12%;
+}
+.hero-text h1{
+    font-size: 20px;
+    font-family: "Courgette", cursive;
+    font-weight:800 ;
+    color: white ;
+    margin-bottom: 40px;
+    
+}
+.hero-text h2{
+    padding: 0%;
+    margin: 0%;
+    font-size: 25px;
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: 400 ;
+    color: #4d9559;
+    margin-bottom: 40px;
+    line-height: 1;
+
+} 
+.hero-text p{
+    font-size: 15px;
+    font-family: "Courgette", cursive;
+    font-weight: 400 ;
+    color: white ;
+    margin-bottom: 40px;
+} 
+.icon{
+    position: absolute;
+    top: 50%;
+    padding:0 9%;
+    transform: translateY(-50%);
+}
+.icon i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color:white;
+    transition: all .50s ease;
+}
+.icon i:hover{
+    color: #4d9559;
+    transform: translateY(-5px);
+}
+.scroll-down{
+    position: absolute;
+    bottom: 6% ;
+    right: 9%;
+}
+.scroll-down i{
+    display: block;
+    font-size: 25px;
+    padding: 12px;
+    color: white;
+    background: #808080;
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+.scroll-down i:hover{
+    transform: translateY(-5px);
+}
+.button{
+    position: absolute;
+    
+    font-size: 25px;
+    font-weight: bold;
+    background-color:#ffffff;
+    border-radius: 10px;
+    transition: all .50s ease;
+}
+.button:hover{
+    color: #4d9559;
+    transform: translateY(-9px);
+}
+@media(max-width:1535px) {
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .icon{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .scroll-down{
+        right: 3%;
+        transition: .2s;
+    }
+}
+@media(max-width:1460px) {
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
+@media(max-width:1340px) {
+    .dd{
+        width: 100%;
+        height: auto;
+    }
+    .hero-text h1{
+        font-size: 20px;
+        margin: 0 0 30px;
+    }
+    .hero-text h2{
+        margin-bottom:  20px;
+    }
+}
+@media(max-width:1195px){
+    section{
+        padding:0 3% ;
+        transition: .2s;
+    }
+    .hero-text{
+        padding-top: 115px;
+    }
+    .dd{
+        text-align: center;
+        width: 560px;
+        height: auto;
+    }
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .icon{
+        display: none;
+    }
+    .scroll-down{
+        display: none;
+    }
+}
+@media(max-width:990px) {
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        width: 300px;
+        height: 40vh;
+        background: #4d9559;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+    }
+}
+@media(max-width:680px) {
+    .dd{
+        width: 100%;
+        height: auto;
+    }
+}
