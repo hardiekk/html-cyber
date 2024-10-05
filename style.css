@@ -23,11 +23,33 @@ header{
     font-weight: 700;
     color: white;
 }
-.navlist{
-
+nav{
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+nav ul{
+   width: 100%;
+   list-style: none;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+nav{
+    
     display: flex;
 }
-.navlist a{
+nav a{
+    position: relative;
    color: white;
    font-size: 15px;
    margin-left: 60px;
@@ -35,9 +57,30 @@ header{
    border-bottom: 2px solid transparent;
    transition:all .55s ease;
 }
-.navlist a:hover{
+nav a:hover{
     color: #4d9559;
     border-bottom: 2px solid whitesmoke;
+}
+.sidebar{
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    margin: 0;
+    width: 100%;
 }
 #menu-icon{
     color: white;
@@ -62,8 +105,8 @@ header{
     position: relative;
     margin-top: 100px;
     margin-left: 70px;
-    height: 380px;
-    width: 400px;
+    height: 590px;
+    width: 500px;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -76,7 +119,7 @@ section{
 }
 .hero-text h1{
     font-size: 20px;
-    font-family: "Courgette", cursive;
+    font-family: "Courgette";
     font-weight:800 ;
     color: white ;
     margin-bottom: 40px;
@@ -86,7 +129,7 @@ section{
     padding: 0%;
     margin: 0%;
     font-size: 25px;
-    font-family: "Playwrite DE Grund", cursive;
+    font-family: "Permanent Marker";
     font-weight: 400 ;
     color: #4d9559;
     margin-bottom: 40px;
@@ -95,7 +138,7 @@ section{
 } 
 .hero-text p{
     font-size: 15px;
-    font-family: "Courgette", cursive;
+    font-family: "Courgette";
     font-weight: 400 ;
     color: white ;
     margin-bottom: 40px;
@@ -107,7 +150,7 @@ section{
     transform: translateY(-50%);
 }
 .icon i{
-    display: block;
+    display: flex;
     margin: 26px 0;
     font-size: 24px;
     color:white;
@@ -136,7 +179,6 @@ section{
 }
 .button{
     position: absolute;
-    
     font-size: 25px;
     font-weight: bold;
     background-color:#ffffff;
@@ -206,10 +248,13 @@ section{
     }
 }
 @media(max-width:990px) {
+    .logo{
+        font-size: 40px;
+    }
     #menu-icon{
         display: block;
     }
-    .navlist{
+    nav{
         position: absolute;
         top: 100%;
         right: 100%;
@@ -221,13 +266,16 @@ section{
         padding: 50px 20px;
         transition: all .55s ease;
     }
-    .navlist a{
+    nav a{
         margin-left: 0;
         display: block;
         margin: 7px 0;
     }
-}
+
 @media(max-width:680px) {
+    .logo{
+        font-size: 40px;
+    }
     .dd{
         width: 100%;
         height: auto;
